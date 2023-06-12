@@ -1,0 +1,15 @@
+{% if latest_question_list %}
+    <ul>
+   Welcome to Pollverse alpha
+<ul>
+      Polls Right Now
+<ul>
+    {% for question in latest_question_list %}
+        <li><a href="/polls/{{ question.id }}/">{{ question.question_text }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
+<ul>
+end of the page is here
